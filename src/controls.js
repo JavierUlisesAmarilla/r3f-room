@@ -41,6 +41,17 @@ export const controls = {
   mugRadiusBottom: { value: 0.16, label: 'Mug Radius Bottom' },
   mugHeight: { value: 0.5, label: 'Mug Height' },
 
+  cardUrl: {
+    value: 'textures/cards/(1).png', options: {
+      "Card 1": "textures/cards/(1).png",
+      "Card 2": "textures/cards/(2).png",
+    },
+    label: 'Card Texture',
+  },
+  cardWidth: { value: 1, label: 'Card Width' },
+  cardHeight: { value: 2, label: 'Card Height' },
+  cardLength: { value: 0.1, label: 'Card Length' },
+
   lightRadius: { value: 0, label: 'Light Radius' },
   showAxesHelper: { value: false, label: 'Axis Helper' },
 }

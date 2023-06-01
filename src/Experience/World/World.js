@@ -2,12 +2,14 @@ import { useControls } from "leva"
 import { Wall } from "./Wall"
 import { controls } from "../../controls"
 import { Mug } from "./Mug"
+import { Card } from "./Card"
 
 
 export const World = () => {
   const {
     roomWidth, roomHeight, roomLength, wallUrl, floorUrl,
     mugUrl, mugRadiusTop, mugRadiusBottom, mugHeight,
+    cardUrl, cardWidth, cardHeight, cardLength,
     showAxesHelper,
   } = useControls(controls)
 
@@ -49,6 +51,16 @@ export const World = () => {
         radiusBottom={mugRadiusBottom}
         height={mugHeight}
       ></Mug>
+
+      {/* Card */}
+      <Card
+        position={[0, 0, -roomLength / 2 + cardLength / 2]}
+        rotation={[0, 0, 0]}
+        textureUrl={cardUrl}
+        width={cardWidth}
+        height={cardHeight}
+        length={cardLength}
+      ></Card>
 
       {showAxesHelper && <axesHelper args={[10]}></axesHelper>}
     </>
