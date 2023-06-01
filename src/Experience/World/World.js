@@ -66,7 +66,7 @@ export const World = () => {
 
       {/* Frame */}
       <Frame
-        position={[roomLength / 2 - frameLength / 2, 0, 0]}
+        position={[roomWidth / 2 - frameLength / 2, 0, 0]}
         rotation={[0, -Math.PI / 2, 0]}
         textureUrl={frameUrl}
         width={frameWidth}

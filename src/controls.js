@@ -38,7 +38,7 @@ export const controls = {
     label: 'Mug Texture',
   },
   mugRadiusTop: { value: 0.2, label: 'Mug Radius Top' },
-  mugRadiusBottom: { value: 0.16, label: 'Mug Radius Bottom' },
+  mugRadiusBottom: { value: 0.2, label: 'Mug Radius Bottom' },
   mugHeight: { value: 0.5, label: 'Mug Height' },
 
   cardUrl: {
