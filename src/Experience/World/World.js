@@ -3,6 +3,7 @@ import { Wall } from "./Wall"
 import { controls } from "../../controls"
 import { Mug } from "./Mug"
 import { Card } from "./Card"
+import { Frame } from "./Frame"
 
 
 export const World = () => {
@@ -10,6 +11,7 @@ export const World = () => {
     roomWidth, roomHeight, roomLength, wallUrl, floorUrl,
     mugUrl, mugRadiusTop, mugRadiusBottom, mugHeight,
     cardUrl, cardWidth, cardHeight, cardLength,
+    frameUrl, frameWidth, frameHeight, frameLength,
     showAxesHelper,
   } = useControls(controls)
 
@@ -61,6 +63,16 @@ export const World = () => {
         height={cardHeight}
         length={cardLength}
       ></Card>
+
+      {/* Frame */}
+      <Frame
+        position={[roomLength / 2 - frameLength / 2, 0, 0]}
+        rotation={[0, -Math.PI / 2, 0]}
+        textureUrl={frameUrl}
+        width={frameWidth}
+        height={frameHeight}
+        length={frameLength}
+      ></Frame>
 
       {showAxesHelper && <axesHelper args={[10]}></axesHelper>}
     </>

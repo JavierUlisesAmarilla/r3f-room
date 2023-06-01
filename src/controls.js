@@ -48,9 +48,23 @@ export const controls = {
     },
     label: 'Card Texture',
   },
-  cardWidth: { value: 1, label: 'Card Width' },
+  cardWidth: { value: 1.5, label: 'Card Width' },
   cardHeight: { value: 2, label: 'Card Height' },
   cardLength: { value: 0.1, label: 'Card Length' },
+
+  frameUrl: {
+    value: 'textures/frames/(1).png', options: {
+      "Frame 1": "textures/frames/(1).png",
+      "Frame 2": "textures/frames/(2).png",
+      "Frame 3": "textures/frames/(3).png",
+      "Frame 4": "textures/frames/(4).png",
+      "Frame 5": "textures/frames/(5).jpg",
+    },
+    label: 'Frame Texture',
+  },
+  frameWidth: { value: 1.5, label: 'Frame Width' },
+  frameHeight: { value: 2, label: 'Frame Height' },
+  frameLength: { value: 0.1, label: 'Frame Length' },
 
   lightRadius: { value: 0, label: 'Light Radius' },
   showAxesHelper: { value: false, label: 'Axis Helper' },
