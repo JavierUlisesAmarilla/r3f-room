@@ -1,0 +1,61 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important
+}
+
+@font-face {
+  font-family: cinzel;
+  src: url('../../public/font/Cinzel-VariableFont_wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+canvas {
+  position: fixed;
+  z-index: 1;
+}
+
+.loaderContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: cinzel;
+  overflow: hidden;
+}
+
+.loaderContainer h2 {
+  position: absolute;
+  top: 60%;
+  color: #a6e9f4;
+  font-size: 3em;
+}
