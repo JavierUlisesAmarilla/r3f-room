@@ -4,7 +4,7 @@ import { controls } from "../../controls"
 
 
 export const World = () => {
-  const { roomWidth, roomHeight, roomLength } = useControls(controls)
+  const { roomWidth, roomHeight, roomLength, wallUrl, floorUrl, showAxesHelper } = useControls(controls)
 
   return (
     <>
@@ -12,7 +12,7 @@ export const World = () => {
       <Wall
         position={[0, 0, -roomLength / 2]}
         rotation={[0, 0, 0]}
-        textureUrl={'textures/walls/(7).png'}
+        textureUrl={wallUrl}
         width={roomWidth}
         height={roomHeight}
       ></Wall>
@@ -21,7 +21,7 @@ export const World = () => {
       <Wall
         position={[roomWidth / 2, 0, 0]}
         rotation={[0, -Math.PI / 2, 0]}
-        textureUrl={'textures/walls/(7).png'}
+        textureUrl={wallUrl}
         width={roomLength}
         height={roomHeight}
       ></Wall>
@@ -30,12 +30,12 @@ export const World = () => {
       <Wall
         position={[0, -roomHeight / 2, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
-        textureUrl={'textures/walls/(5).png'}
+        textureUrl={floorUrl}
         width={roomWidth}
         height={roomLength}
       ></Wall>
 
-      <axesHelper args={[10]}></axesHelper>
+      {showAxesHelper && <axesHelper args={[10]}></axesHelper>}
     </>
   )
 }
