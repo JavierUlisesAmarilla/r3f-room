@@ -1,4 +1,6 @@
 export const controls = {
+  enableAnim: { value: false, label: 'Enable Animation' },
+
   roomWidth: { value: 5, label: 'Room Width' },
   roomHeight: { value: 5, label: 'Room Height' },
   roomLength: { value: 5, label: 'Room Length' },
