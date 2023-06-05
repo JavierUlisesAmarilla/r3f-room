@@ -9,9 +9,9 @@ import { Frame } from "./Frame"
 export const World = () => {
   const {
     roomWidth, roomHeight, roomLength, wallUrl, floorUrl,
-    mugUrl, mugRadiusTop, mugRadiusBottom, mugHeight,
-    cardUrl, cardWidth, cardHeight, cardLength,
-    frameUrl, frameWidth, frameHeight, frameLength,
+    showMug, mugUrl, mugRadiusTop, mugRadiusBottom, mugHeight,
+    showCard, cardUrl, cardWidth, cardHeight, cardLength,
+    showFrame, frameUrl, frameWidth, frameHeight, frameLength,
     showAxesHelper,
   } = useControls(controls)
 
@@ -45,36 +45,44 @@ export const World = () => {
       ></Wall>
 
       {/* Mug */}
-      <Mug
-        position={[0, -roomHeight / 2 + mugHeight / 2, -roomLength / 2 + mugRadiusTop]}
-        rotation={[0, 0, 0]}
-        textureUrl={mugUrl}
-        radiusTop={mugRadiusTop}
-        radiusBottom={mugRadiusBottom}
-        height={mugHeight}
-      ></Mug>
+      {showMug &&
+        <Mug
+          position={[0, 0, 0]}
+          rotation={[0, 0, 0]}
+          textureUrl={mugUrl}
+          radiusTop={mugRadiusTop}
+          radiusBottom={mugRadiusBottom}
+          height={mugHeight}
+        ></Mug>
+      }
 
       {/* Card */}
-      <Card
-        position={[0, 0, -roomLength / 2 + cardLength / 2]}
-        rotation={[0, 0, 0]}
-        textureUrl={cardUrl}
-        width={cardWidth}
-        height={cardHeight}
-        length={cardLength}
-      ></Card>
+      {showCard &&
+        <Card
+          position={[0, 0, -roomLength / 2 + cardLength / 2]}
+          rotation={[0, 0, 0]}
+          textureUrl={cardUrl}
+          width={cardWidth}
+          height={cardHeight}
+          length={cardLength}
+        ></Card>
+      }
 
       {/* Frame */}
-      <Frame
-        position={[roomWidth / 2 - frameLength / 2, 0, 0]}
-        rotation={[0, -Math.PI / 2, 0]}
-        textureUrl={frameUrl}
-        width={frameWidth}
-        height={frameHeight}
-        length={frameLength}
-      ></Frame>
+      {showFrame &&
+        <Frame
+          position={[roomWidth / 2 - frameLength / 2, 0, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          textureUrl={frameUrl}
+          width={frameWidth}
+          height={frameHeight}
+          length={frameLength}
+        ></Frame>
+      }
 
-      {showAxesHelper && <axesHelper args={[10]}></axesHelper>}
+      {showAxesHelper &&
+        <axesHelper args={[10]}></axesHelper>
+      }
     </>
   )
 }

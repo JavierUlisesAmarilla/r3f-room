@@ -44,7 +44,7 @@ export default function Experience() {
 
         <PerspectiveCamera
           makeDefault
-          position={[-roomWidth, roomHeight, roomLength]}
+          position={[-roomWidth, roomHeight / 2, roomLength]}
         ></PerspectiveCamera>
 
         <Preload all />

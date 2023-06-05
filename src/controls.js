@@ -27,6 +27,7 @@ export const controls = {
     label: 'Floor Texture',
   },
 
+  showMug: { value: true, label: 'Show Mug' },
   mugUrl: {
     value: 'textures/mugs/(4).jpg', options: {
       "Mug 1": "textures/mugs/(1).jpg",
@@ -41,6 +42,7 @@ export const controls = {
   mugRadiusBottom: { value: 0.2, label: 'Mug Radius Bottom' },
   mugHeight: { value: 0.5, label: 'Mug Height' },
 
+  showCard: { value: false, label: 'Show Card' },
   cardUrl: {
     value: 'textures/cards/(1).png', options: {
       "Card 1": "textures/cards/(1).png",
@@ -52,6 +54,7 @@ export const controls = {
   cardHeight: { value: 2, label: 'Card Height' },
   cardLength: { value: 0.1, label: 'Card Length' },
 
+  showFrame: { value: false, label: 'Show Frame' },
   frameUrl: {
     value: 'textures/frames/(1).png', options: {
       "Frame 1": "textures/frames/(1).png",
