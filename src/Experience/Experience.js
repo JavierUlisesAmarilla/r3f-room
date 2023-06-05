@@ -50,7 +50,7 @@ export default function Experience() {
         <Preload all />
       </Canvas>
 
-      <Loader />
+      {/* <Loader /> */}
     </>
   )
 }
