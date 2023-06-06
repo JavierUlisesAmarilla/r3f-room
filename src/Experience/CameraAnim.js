@@ -10,8 +10,8 @@ export default function CameraAnim() {
 
   useFrame(state => {
     if (enableAnim) {
-      state.camera.lookAt(0, 0, 0)
-      state.camera.position.lerp(vec.set(-1, 0, 1), .005)
+      state.camera.lookAt(0, -1.7, 0)
+      state.camera.position.lerp(vec.set(-1, -1.7, 1), .005)
     }
   })
 }

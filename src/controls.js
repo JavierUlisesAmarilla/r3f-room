@@ -40,9 +40,9 @@ export const controls = {
     },
     label: 'Mug Texture',
   },
-  mugRadiusTop: { value: 0.2, label: 'Mug Radius Top' },
-  mugRadiusBottom: { value: 0.2, label: 'Mug Radius Bottom' },
-  mugHeight: { value: 0.5, label: 'Mug Height' },
+  mugRadiusTop: { value: 0.1, label: 'Mug Radius Top' },
+  mugRadiusBottom: { value: 0.1, label: 'Mug Radius Bottom' },
+  mugHeight: { value: 0.25, label: 'Mug Height' },
 
   showCard: { value: false, label: 'Show Card' },
   cardUrl: {

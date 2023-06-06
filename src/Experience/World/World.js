@@ -4,6 +4,7 @@ import { controls } from "../../controls"
 import { Mug } from "./Mug"
 import { Card } from "./Card"
 import { Frame } from "./Frame"
+import { Table } from "./Table"
 
 
 export const World = () => {
@@ -44,10 +45,17 @@ export const World = () => {
         height={roomLength}
       ></Wall>
 
+      {/* Table */}
+      <Table
+        position={[0, -2.5, 0]}
+        rotation={[0, 0, 0]}
+        scale={[3,3,3]}
+      ></Table>
+
       {/* Mug */}
       {showMug &&
         <Mug
-          position={[0, 0, 0]}
+          position={[0, -1.7, 0]}
           rotation={[0, 0, 0]}
           textureUrl={mugUrl}
           radiusTop={mugRadiusTop}
