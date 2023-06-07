@@ -44,6 +44,7 @@ export const controls = {
         },
         label: 'Table Model',
       },
+      tableColor: { value: '#ff0000', label: 'Table Color' },
     },
     { collapsed: true },
   ),

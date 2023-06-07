@@ -2,8 +2,14 @@ import { useGLTF } from "@react-three/drei"
 import { RigidBody } from '@react-three/rapier'
 
 
-export const Table = ({ modelUrl, position, rotation, scale }) => {
+export const Table = ({ modelUrl, position, rotation, scale, color }) => {
   const model = useGLTF(modelUrl)
+
+  model.scene.traverse(child => {
+    if (child.isMesh) {
+      child.material.color.set(color)
+    }
+  })
 
   return (
     <RigidBody

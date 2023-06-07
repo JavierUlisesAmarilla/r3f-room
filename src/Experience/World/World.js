@@ -10,7 +10,7 @@ import { Table } from "./Table"
 export const World = () => {
   const {
     roomWidth, roomHeight, roomLength, wallUrl, floorUrl,
-    tableUrl,
+    tableUrl, tableColor,
     showMug, mugUrl,
     showCard, cardUrl, cardWidth, cardHeight, cardLength,
     showFrame, frameUrl, frameWidth, frameHeight, frameLength,
@@ -52,6 +52,7 @@ export const World = () => {
         position={[0, -2, 0]}
         rotation={[0, 0, 0]}
         scale={[3, 3, 3]}
+        color={tableColor}
       ></Table>
 
       {/* Mug */}
