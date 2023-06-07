@@ -49,7 +49,7 @@ export const World = () => {
       {/* Table */}
       <Table
         modelUrl={tableUrl}
-        position={[0, -2.5, 0]}
+        position={[0, -2, 0]}
         rotation={[0, 0, 0]}
         scale={[3, 3, 3]}
       ></Table>
@@ -58,7 +58,7 @@ export const World = () => {
       {showMug &&
         <Mug
           modelUrl={mugUrl}
-          position={[0, -1.7, 0]}
+          position={[-1, -3.5, 0.2]}
           rotation={[0, 0, 0]}
           scale={[3, 3, 3]}
         ></Mug>
