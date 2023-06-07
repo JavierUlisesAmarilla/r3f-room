@@ -5,44 +5,40 @@ export const controls = {
   roomHeight: { value: 5, label: 'Room Height' },
   roomLength: { value: 5, label: 'Room Length' },
   wallUrl: {
-    value: 'textures/walls/(3).png', options: {
+    value: 'textures/walls/(1).png', options: {
       "Wall 1": "textures/walls/(1).png",
       "Wall 2": "textures/walls/(2).png",
       "Wall 3": "textures/walls/(3).png",
-      "Wall 4": "textures/walls/(4).png",
-      "Wall 5": "textures/walls/(5).png",
-      "Wall 6": "textures/walls/(6).png",
-      "Wall 7": "textures/walls/(7).png",
     },
     label: 'Wall Texture',
   },
   floorUrl: {
-    value: 'textures/walls/(2).png', options: {
-      "Floor 1": "textures/walls/(1).png",
-      "Floor 2": "textures/walls/(2).png",
-      "Floor 3": "textures/walls/(3).png",
-      "Floor 4": "textures/walls/(4).png",
-      "Floor 5": "textures/walls/(5).png",
-      "Floor 6": "textures/walls/(6).png",
-      "Floor 7": "textures/walls/(7).png",
+    value: 'textures/floors/(2).png', options: {
+      "Floor 1": "textures/floors/(1).png",
+      "Floor 2": "textures/floors/(2).png",
+      "Floor 3": "textures/floors/(3).png",
+      "Floor 4": "textures/floors/(4).png",
+      "Floor 5": "textures/floors/(5).png",
+      "Floor 6": "textures/floors/(6).png",
+      "Floor 7": "textures/floors/(7).png",
     },
     label: 'Floor Texture',
   },
 
+  tableUrl: {
+    value: 'models/tables/(1).glb', options: {
+      "Table 1": "models/tables/(1).glb",
+    },
+    label: 'Table Model',
+  },
+
   showMug: { value: true, label: 'Show Mug' },
   mugUrl: {
-    value: 'textures/mugs/(4).jpg', options: {
-      "Mug 1": "textures/mugs/(1).jpg",
-      "Mug 2": "textures/mugs/(2).jpg",
-      "Mug 3": "textures/mugs/(3).jpg",
-      "Mug 4": "textures/mugs/(4).jpg",
-      "Mug 5": "textures/mugs/(5).png",
+    value: 'models/mugs/(1).glb', options: {
+      "Mug 1": "models/mugs/(1).glb",
     },
-    label: 'Mug Texture',
+    label: 'Mug Model',
   },
-  mugRadiusTop: { value: 0.1, label: 'Mug Radius Top' },
-  mugRadiusBottom: { value: 0.1, label: 'Mug Radius Bottom' },
-  mugHeight: { value: 0.25, label: 'Mug Height' },
 
   showCard: { value: false, label: 'Show Card' },
   cardUrl: {

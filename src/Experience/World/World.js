@@ -10,7 +10,8 @@ import { Table } from "./Table"
 export const World = () => {
   const {
     roomWidth, roomHeight, roomLength, wallUrl, floorUrl,
-    showMug, mugUrl, mugRadiusTop, mugRadiusBottom, mugHeight,
+    tableUrl,
+    showMug, mugUrl,
     showCard, cardUrl, cardWidth, cardHeight, cardLength,
     showFrame, frameUrl, frameWidth, frameHeight, frameLength,
     showAxesHelper,
@@ -20,56 +21,55 @@ export const World = () => {
     <>
       {/* Back wall */}
       <Wall
+        textureUrl={wallUrl}
         position={[0, 0, -roomLength / 2]}
         rotation={[0, 0, 0]}
-        textureUrl={wallUrl}
         width={roomWidth}
         height={roomHeight}
       ></Wall>
 
       {/* Right wall */}
       <Wall
+        textureUrl={wallUrl}
         position={[roomWidth / 2, 0, 0]}
         rotation={[0, -Math.PI / 2, 0]}
-        textureUrl={wallUrl}
         width={roomLength}
         height={roomHeight}
       ></Wall>
 
       {/* Bottom wall */}
       <Wall
+        textureUrl={floorUrl}
         position={[0, -roomHeight / 2, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
-        textureUrl={floorUrl}
         width={roomWidth}
         height={roomLength}
       ></Wall>
 
       {/* Table */}
       <Table
+        modelUrl={tableUrl}
         position={[0, -2.5, 0]}
         rotation={[0, 0, 0]}
-        scale={[3,3,3]}
+        scale={[3, 3, 3]}
       ></Table>
 
       {/* Mug */}
       {showMug &&
         <Mug
+          modelUrl={mugUrl}
           position={[0, -1.7, 0]}
           rotation={[0, 0, 0]}
-          textureUrl={mugUrl}
-          radiusTop={mugRadiusTop}
-          radiusBottom={mugRadiusBottom}
-          height={mugHeight}
+          scale={[3, 3, 3]}
         ></Mug>
       }
 
       {/* Card */}
       {showCard &&
         <Card
+          textureUrl={cardUrl}
           position={[0, 0, -roomLength / 2 + cardLength / 2]}
           rotation={[0, 0, 0]}
-          textureUrl={cardUrl}
           width={cardWidth}
           height={cardHeight}
           length={cardLength}
@@ -79,9 +79,9 @@ export const World = () => {
       {/* Frame */}
       {showFrame &&
         <Frame
+          textureUrl={frameUrl}
           position={[roomWidth / 2 - frameLength / 2, 0, 0]}
           rotation={[0, -Math.PI / 2, 0]}
-          textureUrl={frameUrl}
           width={frameWidth}
           height={frameHeight}
           length={frameLength}

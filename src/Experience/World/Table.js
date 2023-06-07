@@ -1,8 +1,8 @@
 import { useGLTF } from "@react-three/drei"
 
 
-export const Table = ({ position, rotation, scale }) => {
-  const model = useGLTF('models/table.glb')
+export const Table = ({ modelUrl, position, rotation, scale }) => {
+  const model = useGLTF(modelUrl)
 
   return (
     <primitive
