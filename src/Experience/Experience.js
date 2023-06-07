@@ -7,7 +7,6 @@ import Loader from './Loader.js'
 import '../styles/experience.css'
 import { World } from './World/World.js'
 import { controls } from '../controls.js'
-import CameraAnim from './CameraAnim.js'
 import { Physics } from '@react-three/rapier'
 
 
@@ -49,7 +48,6 @@ export default function Experience() {
             makeDefault
             position={[-roomWidth, roomHeight / 2, roomLength]}
           ></PerspectiveCamera>
-          <CameraAnim></CameraAnim>
 
           <Preload all />
         </Physics>
