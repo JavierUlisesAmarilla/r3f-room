@@ -40,14 +40,14 @@ export default function Experience() {
             <Bloom luminanceThreshold={1} mipmapBlur intensity={0.8} />
           </EffectComposer>
 
-          <OrbitControls ref={orbitC}
-          // enableRotate={false} enableZoom={false} enablePan={false}
-          />
-
           <PerspectiveCamera
             makeDefault
             position={[-roomWidth, roomHeight / 2, roomLength]}
           ></PerspectiveCamera>
+
+          <OrbitControls ref={orbitC}
+          // enableRotate={false} enableZoom={false} enablePan={false}
+          />
 
           <Preload all />
         </Physics>
