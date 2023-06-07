@@ -21,7 +21,6 @@ export const Mug = ({ modelUrl, position, rotation, scale }) => {
   useFrame(state => {
     if (enableAnim && rigidBody.current) {
       const curPos = vec3(rigidBody.current.translation())
-      curPos.set(curPos.x + 0.5, curPos.y + 2.6, curPos.z) // Temp
       state.camera.lookAt(curPos)
       state.camera.position.lerp(curPos.clone().set(curPos.x - 0.7, curPos.y, curPos.z + 0.7), .005)
     }
@@ -29,6 +28,7 @@ export const Mug = ({ modelUrl, position, rotation, scale }) => {
 
   return (
     <RigidBody
+      ref={rigidBody}
       colliders='hull'
       position={position}
       rotation={rotation}
