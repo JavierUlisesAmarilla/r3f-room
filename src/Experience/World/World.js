@@ -59,9 +59,9 @@ export const World = () => {
       {showMug &&
         <Mug
           modelUrl={mugUrl}
-          position={[-1, -3.5, 0.2]}
-          rotation={[0, 0, 0]}
-          scale={[3, 3, 3]}
+          position={[0, 0, 0]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[0.1, 0.1, 0.1]}
         ></Mug>
       }
 

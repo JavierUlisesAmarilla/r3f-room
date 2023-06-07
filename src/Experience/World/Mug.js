@@ -8,8 +8,15 @@ import { controls } from '../../controls'
 
 export const Mug = ({ modelUrl, position, rotation, scale }) => {
   const { enableAnim } = useControls(controls)
-  const model = useGLTF(modelUrl)
+  const { nodes } = useGLTF(modelUrl)
   const rigidBody = useRef(null)
+  const meshes = []
+
+  Object.keys(nodes).forEach(nodeKey => {
+    if (nodes[nodeKey]?.isMesh) {
+      meshes.push(nodes[nodeKey])
+    }
+  })
 
   useFrame(state => {
     if (enableAnim && rigidBody.current) {
@@ -22,7 +29,6 @@ export const Mug = ({ modelUrl, position, rotation, scale }) => {
 
   return (
     <RigidBody
-      ref={rigidBody}
       colliders='hull'
       position={position}
       rotation={rotation}
@@ -30,7 +36,14 @@ export const Mug = ({ modelUrl, position, rotation, scale }) => {
     // enabledRotations={[false, false, false]}
     // enabledTranslations={[false, false, false]}
     >
-      <primitive object={model.scene}></primitive>
+      {meshes.map((mesh, index) =>
+        <mesh
+          key={index}
+          geometry={mesh.geometry}
+          material={mesh.material}
+          castShadow
+        ></mesh>
+      )}
     </RigidBody>
   )
 }

@@ -4,10 +4,12 @@ import { RigidBody } from '@react-three/rapier'
 
 export const Table = ({ modelUrl, position, rotation, scale, color }) => {
   const { nodes } = useGLTF(modelUrl)
+  const meshes = []
 
   color && Object.keys(nodes).forEach(nodeKey => {
-    if (nodes[nodeKey]) {
+    if (nodes[nodeKey]?.isMesh) {
       nodes[nodeKey].material.color.set(color)
+      meshes.push(nodes[nodeKey])
     }
   })
 
@@ -20,12 +22,12 @@ export const Table = ({ modelUrl, position, rotation, scale, color }) => {
     // enabledRotations={[false, false, false]}
     // enabledTranslations={[false, false, false]}
     >
-      {Object.keys(nodes).map((nodeKey, index) =>
+      {meshes.map((mesh, index) =>
         <mesh
           key={index}
-          geometry={nodes[nodeKey].geometry}
-          material={nodes[nodeKey].material}
-          color={color}
+          geometry={mesh.geometry}
+          material={mesh.material}
+          receiveShadow
           castShadow
         ></mesh>
       )}
