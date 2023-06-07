@@ -5,7 +5,7 @@ import { RigidBody } from '@react-three/rapier'
 export const Table = ({ modelUrl, position, rotation, scale, color }) => {
   const { nodes } = useGLTF(modelUrl)
 
-  Object.keys(nodes).forEach(nodeKey => {
+  color && Object.keys(nodes).forEach(nodeKey => {
     if (nodes[nodeKey]) {
       nodes[nodeKey].material.color.set(color)
     }
