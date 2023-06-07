@@ -3,13 +3,11 @@ import { RigidBody } from '@react-three/rapier'
 
 
 export const Table = ({ modelUrl, position, rotation, scale, color }) => {
-  const model = useGLTF(modelUrl)
+  const { nodes } = useGLTF(modelUrl)
 
-  model.scene.traverse(child => {
-    if (child.isMesh) {
-      child.material.color.set(color)
-    }
-  })
+  if (nodes['tableCoffee(Clone)']) {
+    nodes['tableCoffee(Clone)'].material.color.set(color)
+  }
 
   return (
     <RigidBody
@@ -20,7 +18,12 @@ export const Table = ({ modelUrl, position, rotation, scale, color }) => {
     // enabledRotations={[false, false, false]}
     // enabledTranslations={[false, false, false]}
     >
-      <primitive object={model.scene}></primitive>
+      <mesh
+        geometry={nodes['tableCoffee(Clone)'].geometry}
+        material={nodes['tableCoffee(Clone)'].material}
+        color={color}
+        castShadow
+      ></mesh>
     </RigidBody>
   )
 }

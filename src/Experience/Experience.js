@@ -20,14 +20,14 @@ export default function Experience() {
         <Physics>
           <World></World>
 
-          <directionalLight castShadow position={[0, 5, 5]} intensity={.8} shadow-mapSize={[1024, 1024]} >
+          <directionalLight castShadow position={[-5, 5, 5]} intensity={.8} shadow-mapSize={[1024, 1024]} >
             <mesh>
               <sphereGeometry args={[lightRadius]}></sphereGeometry>
               <meshStandardMaterial color={'red'}></meshStandardMaterial>
             </mesh>
           </directionalLight>
 
-          <ambientLight intensity={1} >
+          <ambientLight intensity={0.1} >
             <mesh>
               <sphereGeometry args={[lightRadius]}></sphereGeometry>
               <meshStandardMaterial color={'green'}></meshStandardMaterial>
