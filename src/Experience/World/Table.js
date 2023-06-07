@@ -5,9 +5,11 @@ import { RigidBody } from '@react-three/rapier'
 export const Table = ({ modelUrl, position, rotation, scale, color }) => {
   const { nodes } = useGLTF(modelUrl)
 
-  if (nodes['tableCoffee(Clone)']) {
-    nodes['tableCoffee(Clone)'].material.color.set(color)
-  }
+  Object.keys(nodes).forEach(nodeKey => {
+    if (nodes[nodeKey]) {
+      nodes[nodeKey].material.color.set(color)
+    }
+  })
 
   return (
     <RigidBody
@@ -18,12 +20,15 @@ export const Table = ({ modelUrl, position, rotation, scale, color }) => {
     // enabledRotations={[false, false, false]}
     // enabledTranslations={[false, false, false]}
     >
-      <mesh
-        geometry={nodes['tableCoffee(Clone)'].geometry}
-        material={nodes['tableCoffee(Clone)'].material}
-        color={color}
-        castShadow
-      ></mesh>
+      {Object.keys(nodes).map((nodeKey, index) =>
+        <mesh
+          key={index}
+          geometry={nodes[nodeKey].geometry}
+          material={nodes[nodeKey].material}
+          color={color}
+          castShadow
+        ></mesh>
+      )}
     </RigidBody>
   )
 }
