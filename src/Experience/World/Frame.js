@@ -2,7 +2,7 @@ import { RepeatWrapping } from 'three'
 import { useTexture } from "@react-three/drei"
 
 
-export const Frame = ({ position, rotation, textureUrl, width, height, length }) => {
+export const Frame = ({ textureUrl, position, rotation, width, height, length }) => {
   const texture = useTexture(textureUrl)
   texture.wrapS = texture.wrapT = RepeatWrapping;
   texture.repeat.set(1, 1);
