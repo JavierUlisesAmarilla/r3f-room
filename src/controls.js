@@ -88,7 +88,7 @@ export const controls = {
           "Frame 2": "textures/frames/(2).png",
           "Frame 3": "textures/frames/(3).png",
           "Frame 4": "textures/frames/(4).png",
-          "Frame 5": "textures/frames/(5).jpg",
+          "Frame 5": "textures/frames/(5).png",
         },
         label: 'Frame Texture',
       },
