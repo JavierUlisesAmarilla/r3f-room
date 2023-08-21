@@ -62,42 +62,42 @@ export const controls = {
     { collapsed: true },
   ),
 
-  Card: folder(
-    {
-      showCard: { value: false, label: 'Show Card' },
-      cardUrl: {
-        value: 'textures/cards/(1).png', options: {
-          "Card 1": "textures/cards/(1).png",
-          "Card 2": "textures/cards/(2).png",
-        },
-        label: 'Card Texture',
-      },
-      cardWidth: { value: 1.5, label: 'Card Width' },
-      cardHeight: { value: 2, label: 'Card Height' },
-      cardLength: { value: 0.1, label: 'Card Length' },
-    },
-    { collapsed: true },
-  ),
+  // Card: folder(
+  //   {
+  //     showCard: { value: false, label: 'Show Card' },
+  //     cardUrl: {
+  //       value: 'textures/cards/(1).png', options: {
+  //         "Card 1": "textures/cards/(1).png",
+  //         "Card 2": "textures/cards/(2).png",
+  //       },
+  //       label: 'Card Texture',
+  //     },
+  //     cardWidth: { value: 1.5, label: 'Card Width' },
+  //     cardHeight: { value: 2, label: 'Card Height' },
+  //     cardLength: { value: 0.1, label: 'Card Length' },
+  //   },
+  //   { collapsed: true },
+  // ),
 
-  Frame: folder(
-    {
-      showFrame: { value: false, label: 'Show Frame' },
-      frameUrl: {
-        value: 'textures/frames/(1).png', options: {
-          "Frame 1": "textures/frames/(1).png",
-          "Frame 2": "textures/frames/(2).png",
-          "Frame 3": "textures/frames/(3).png",
-          "Frame 4": "textures/frames/(4).png",
-          "Frame 5": "textures/frames/(5).png",
-        },
-        label: 'Frame Texture',
-      },
-      frameWidth: { value: 1.5, label: 'Frame Width' },
-      frameHeight: { value: 2, label: 'Frame Height' },
-      frameLength: { value: 0.1, label: 'Frame Length' },
-    },
-    { collapsed: true },
-  ),
+  // Frame: folder(
+  //   {
+  //     showFrame: { value: false, label: 'Show Frame' },
+  //     frameUrl: {
+  //       value: 'textures/frames/(1).png', options: {
+  //         "Frame 1": "textures/frames/(1).png",
+  //         "Frame 2": "textures/frames/(2).png",
+  //         "Frame 3": "textures/frames/(3).png",
+  //         "Frame 4": "textures/frames/(4).png",
+  //         "Frame 5": "textures/frames/(5).png",
+  //       },
+  //       label: 'Frame Texture',
+  //     },
+  //     frameWidth: { value: 1.5, label: 'Frame Width' },
+  //     frameHeight: { value: 2, label: 'Frame Height' },
+  //     frameLength: { value: 0.1, label: 'Frame Length' },
+  //   },
+  //   { collapsed: true },
+  // ),
 
   Setting: folder(
     {
